@@ -13,11 +13,10 @@ class Calculator implements CalculatorInterface
     	return (new AddReply())->setSum($sum);
     }
 
-    public function subtract(\Yuloh\Math\SubtractRequest $request): SubtractReply
+    public function subtract(SubtractRequest $request): SubtractReply
     {
     	$diff = $request->getX() - $request->getY();
 
     	return (new SubtractReply())->setDiff($diff);
     }
 }
-

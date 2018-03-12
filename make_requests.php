@@ -1,12 +1,12 @@
 <?php
 
 use Yuloh\Math\AddRequest;
-use Yuloh\Math\CalculatorClient;
+use Yuloh\Math\API;
 use Yuloh\Math\SubtractRequest;
 
 require __DIR__ . '/vendor/autoload.php';
 
-$calculator = new CalculatorClient();
+$calculator = new API();
 
 $req   = (new AddRequest())->setX(2)->setY(4);
 $reply = $calculator->add($req);
